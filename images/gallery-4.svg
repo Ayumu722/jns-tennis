@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#3aa873"/><stop offset="1" stop-color="#0f3d26"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g4)"/>
+  <g fill="rgba(255,255,255,0.10)"><circle cx="640" cy="120" r="150"/><circle cx="120" cy="500" r="110"/></g>
+  <text x="400" y="285" font-family="Noto Sans JP, sans-serif" font-size="120" text-anchor="middle">🎾</text>
+  <text x="400" y="370" font-family="Noto Sans JP, sans-serif" font-size="44" font-weight="700" fill="#ffffff" text-anchor="middle">Group Photo</text>
+  <text x="400" y="420" font-family="Noto Sans JP, sans-serif" font-size="26" fill="rgba(255,255,255,0.8)" text-anchor="middle">Photo placeholder</text>
+</svg>
