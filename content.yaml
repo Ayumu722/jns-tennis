@@ -2,25 +2,25 @@
 # 変更後: python3 build.py → git push
 
 site:
-  title: 日本神経科学大会 硬式テニス交流会
-  description: 日本神経科学大会 硬式テニス交流会の公式案内ページ。日時・会場・参加申込はこちらから。
-  brand: 神経科学テニス交流会
-  footer_title: 日本神経科学大会 硬式テニス交流会
-  copyright: 神経科学テニス交流会 運営事務局
+  title: Neuro2026 硬式テニス交流会【非公式】
+  description: Neuro2026 硬式テニス交流会の案内ページ。日時・会場・参加申込はこちらから。
+  brand: 神経科学テニス交流会【非公式】
+  footer_title: Neuro2026 硬式テニス交流会【非公式】
+  copyright: 神経科学テニス交流会 有志
 
 hero:
-  kicker: 第XX回 日本神経科学大会 懇親イベント
+  kicker: Neuro2026【非公式】 懇親イベント
   title: 硬式テニス交流会
   subtitle: 学会の合間にコートで一汗。研究者どうし、ラケットを通じてつながろう。
   chips:
-    - 📅 【日程未定】
+    - 📅 2026/07/31 xx:xx-xx:xx
     - 📍 【会場未定】
     - 👥 初心者歓迎
 
 about:
   paragraphs:
     - >-
-      日本神経科学大会の参加者を対象とした、硬式テニスの交流会です。
+      Neuro2026の参加者を対象とした、硬式テニスの交流会です。
       ニューロサイエンスの第一線で活躍する研究者・学生が、学会の枠を越えて
       スポーツを通じて親睦を深めることを目的としています。
     - >-
@@ -37,12 +37,12 @@ about:
     - icon: ☀️
       title: 気軽に参加
       text: 学会のリフレッシュに最適。
-  organizer_main: 【主催団体名・未定】
-  organizer_co: 【未定】
+  organizer_main: 【神経科学テニス交流会 有志】
+  organizer_co: 【Eichi Toyoizumi, Ayumu Yamashita】
 
 access:
   date:
-    headline: 【日程未定】
+    headline: 2026/07/31 xx:xx-xx:xx
     detail: 大会会期中の予定です。確定次第こちらに掲載します。
   venue:
     headline: 【テニスコート名・未定】
@@ -60,19 +60,12 @@ schedule:
   timeline:
     - time: 【時刻未定】
       title: 集合・受付
-      description: コートに集合。参加費のお支払い・グループ分け。
+      description: コートに集合。参加費のお支払い
     - time: 【時刻未定】
       title: ウォームアップ・乱打
       description: 準備運動と肩慣らし。
     - time: 【時刻未定】
-      title: 交流試合（ダブルス総当り）
-      description: レベルに応じたグループでダブルスを実施予定。
-    - time: 【時刻未定】
-      title: 表彰・記念撮影
-      description: 結果発表と集合写真。
-    - time: 【時刻未定】
-      title: 解散（懇親会は任意）
-      description: 希望者で懇親会を予定（別途）。
+      title: 解散
   note: ※ 形式・時間は参加人数により変更する場合があります。
 
 fee:
@@ -82,7 +75,6 @@ fee:
     - テニスラケット（レンタル可否は調整中）
     - 運動できる服装・テニスシューズ
     - 飲み物・タオル・着替え
-    - 日焼け止め・帽子（屋外コートの場合）
 
 register:
   lead: 下記フォームよりお申し込みください。定員に達し次第締め切ります。締切・定員は確定次第ご案内します。
