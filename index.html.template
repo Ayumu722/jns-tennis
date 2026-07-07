@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
   <!-- ===== Header / Nav ===== -->
@@ -35,8 +35,9 @@
   <!-- ===== Hero ===== -->
   <section class="hero{% if hero.background %} hero--image{% endif %}">
     {%- if hero.background %}
-    <img class="hero-bg" src="{{ hero.background }}" alt="" aria-hidden="true" />
-    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-bg" src="{{ hero.background }}" alt="" />
+    </div>
     {%- endif %}
     <div class="container hero-content">
       <p class="hero-kicker">{{ hero.kicker }}</p>
