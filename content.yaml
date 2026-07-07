@@ -1,0 +1,112 @@
+# サイトの文章・リンクはこのファイルだけ編集してください。
+# 変更後: python3 build.py → git push
+
+site:
+  title: 日本神経科学大会 硬式テニス交流会
+  description: 日本神経科学大会 硬式テニス交流会の公式案内ページ。日時・会場・参加申込はこちらから。
+  brand: 神経科学テニス交流会
+  footer_title: 日本神経科学大会 硬式テニス交流会
+  copyright: 神経科学テニス交流会 運営事務局
+
+hero:
+  kicker: 第XX回 日本神経科学大会 懇親イベント
+  title: 硬式テニス交流会
+  subtitle: 学会の合間にコートで一汗。研究者どうし、ラケットを通じてつながろう。
+  chips:
+    - 📅 【日程未定】
+    - 📍 【会場未定】
+    - 👥 初心者歓迎
+
+about:
+  paragraphs:
+    - >-
+      日本神経科学大会の参加者を対象とした、硬式テニスの交流会です。
+      ニューロサイエンスの第一線で活躍する研究者・学生が、学会の枠を越えて
+      スポーツを通じて親睦を深めることを目的としています。
+    - >-
+      競技志向の方からブランクのある方、初心者まで、どなたでも楽しめる
+      レクリエーション形式を予定しています。ラケットレンタルの可否などは
+      追って本ページでご案内します。
+  points:
+    - icon: 🤝
+      title: 研究者ネットワーキング
+      text: 分野・所属を越えたつながりを。
+    - icon: 🎾
+      title: レベル不問
+      text: 初心者から経験者まで歓迎。
+    - icon: ☀️
+      title: 気軽に参加
+      text: 学会のリフレッシュに最適。
+  organizer_main: 【主催団体名・未定】
+  organizer_co: 【未定】
+
+access:
+  date:
+    headline: 【日程未定】
+    detail: 大会会期中の予定です。確定次第こちらに掲載します。
+  venue:
+    headline: 【テニスコート名・未定】
+    detail: 【住所・未定】
+  transport:
+    headline: 【最寄駅・未定】
+    detail: 学会会場からの移動手段は追ってご案内します。
+  map:
+    message: 🗺️ 地図はこちらに掲載予定
+    url: "#"
+    label: Google マップで開く（リンク未設定）
+    placeholder: true  # false にして url を実URLにするとリンクが有効になります
+
+schedule:
+  timeline:
+    - time: 【時刻未定】
+      title: 集合・受付
+      description: コートに集合。参加費のお支払い・グループ分け。
+    - time: 【時刻未定】
+      title: ウォームアップ・乱打
+      description: 準備運動と肩慣らし。
+    - time: 【時刻未定】
+      title: 交流試合（ダブルス総当り）
+      description: レベルに応じたグループでダブルスを実施予定。
+    - time: 【時刻未定】
+      title: 表彰・記念撮影
+      description: 結果発表と集合写真。
+    - time: 【時刻未定】
+      title: 解散（懇親会は任意）
+      description: 希望者で懇親会を予定（別途）。
+  note: ※ 形式・時間は参加人数により変更する場合があります。
+
+fee:
+  amount: ¥【未定】
+  amount_note: コート使用料・ボール代等を含む予定。当日現金払いを想定。
+  bring_items:
+    - テニスラケット（レンタル可否は調整中）
+    - 運動できる服装・テニスシューズ
+    - 飲み物・タオル・着替え
+    - 日焼け止め・帽子（屋外コートの場合）
+
+register:
+  lead: 下記フォームよりお申し込みください。定員に達し次第締め切ります。締切・定員は確定次第ご案内します。
+  form:
+    url: "#"
+    label: 申込フォームを開く（リンク未設定）
+    placeholder: true  # false にして url を Google フォーム等のURLに
+  contact:
+    email: example@example.com
+    label: 【連絡先メール・未定】
+    placeholder: true  # false にして email を実アドレスに
+
+gallery:
+  description: 過去大会の様子（写真は差し替え予定のプレースホルダーです）。
+  images:
+    - src: images/gallery-1.svg
+      alt: 過去大会の様子1
+    - src: images/gallery-2.svg
+      alt: 過去大会の様子2
+    - src: images/gallery-3.svg
+      alt: 過去大会の様子3
+    - src: images/gallery-4.svg
+      alt: 過去大会の様子4
+    - src: images/gallery-5.svg
+      alt: 過去大会の様子5
+    - src: images/gallery-6.svg
+      alt: 過去大会の様子6

@@ -1,38 +1,78 @@
 # 日本神経科学大会 硬式テニス交流会 HP
 
-硬式テニス交流会の案内用の静的サイトです。ビルド不要（HTML/CSS/JSのみ）で、GitHub Pages にそのまま公開できます。
+硬式テニス交流会の案内用の静的サイトです。GitHub Pages にそのまま公開できます。
 
 ## ファイル構成
 
 ```
 jns-tennis/
-├── index.html        # 本体（全セクション）
-├── css/style.css     # デザイン
-├── js/main.js        # ナビ開閉・ギャラリーのライトボックス
-├── images/           # ギャラリー用プレースホルダー画像（SVG）
+├── content.yaml          # ★ 編集するのは基本このファイルだけ
+├── build.py              # content.yaml → index.html を生成
+├── index.html.template   # HTML の骨組み（通常は触らない）
+├── index.html            # 生成物（build.py の出力）
+├── requirements.txt      # ビルド用（初回のみ pip install）
+├── css/style.css         # デザイン
+├── js/main.js            # ナビ開閉・ギャラリーのライトボックス
+├── images/               # ギャラリー画像
 └── README.md
 ```
 
-## 内容の差し替え（プレースホルダー一覧）
+## 内容の更新手順
 
-`index.html` 内の `【...】` と「未設定」のリンクが仮の箇所です。確定情報に置き換えてください。
+1. **`content.yaml` を編集**（日程・会場・参加費・リンクなど）
+2. **ビルドを実行**
 
-- 開催回・大会名: `第XX回 日本神経科学大会`
-- 日時: `【日程未定】`（ヒーロー、日時・会場、各スケジュールの `【時刻未定】`）
-- 会場・住所・最寄駅: `【テニスコート名・未定】` `【住所・未定】` `【最寄駅・未定】`
-- 地図リンク: 「Google マップで開く（リンク未設定）」の `href="#"` を実URLに変更し、`data-placeholder` 属性を削除
-- 主催・共催: `【主催団体名・未定】` `【未定】`
-- 参加費: `¥【未定】`
-- 申込フォーム: 「申込フォームを開く（リンク未設定）」の `href="#"` を Google フォーム等のURLに変更し、`data-placeholder` を削除
-- 連絡先メール: `【連絡先メール・未定】`（`mailto:` も実アドレスに）
-- ギャラリー写真: `images/gallery-*.svg` を実際の写真（jpg/png）に差し替え、`index.html` の `src`/`data-full` を更新
+```bash
+cd ~/Documents/jns-tennis
+python3 -m venv .venv          # 初回のみ
+.venv/bin/pip install -r requirements.txt   # 初回のみ
+.venv/bin/python build.py
+```
 
-> リンクを有効化するときは、その要素から `data-placeholder` を必ず外してください（付いているとクリックが無効化されます）。
+（venv 作成済みなら `.venv/bin/python build.py` だけで OK）
+
+3. **`index.html` も一緒に commit & push**（GitHub Pages は静的ファイルをそのまま配信するため）
+
+> `index.html` は直接編集しないでください。変更は `content.yaml` に書いてから `build.py` を実行します。
+
+## content.yaml の主な項目
+
+| セクション | 内容 |
+|-----------|------|
+| `site` | ページタイトル、説明文、フッター |
+| `hero` | ヒーロー（開催回、日程・会場チップなど） |
+| `about` | 概要文、ポイント3つ、主催・共催 |
+| `access` | 日時・会場・アクセス、Google マップリンク |
+| `schedule` | 当日タイムテーブル（`timeline` リスト） |
+| `fee` | 参加費、持ち物リスト（`bring_items`） |
+| `register` | 申込フォーム URL、連絡先メール |
+| `gallery` | ギャラリー説明、画像パス |
+
+### リンクを有効にする
+
+`access.map`・`register.form`・`register.contact` には `placeholder: true/false` があります。
+
+- `placeholder: true` … リンク無効（未設定のまま）
+- `placeholder: false` に変更し、`url` / `email` を実際の値に設定 … リンク有効
+
+```yaml
+register:
+  form:
+    url: "https://forms.gle/xxxxxxxx"
+    label: 申込フォームを開く
+    placeholder: false
+```
+
+### ギャラリー写真の差し替え
+
+1. `images/` に写真（jpg/png 等）を置く
+2. `content.yaml` の `gallery.images` で `src` と `alt` を更新
+3. `python3 build.py`
 
 ## ローカルプレビュー
 
 ```bash
-cd ~/Documents/jns-tennis
+python3 build.py
 python3 -m http.server 8000
 # ブラウザで http://localhost:8000 を開く
 ```
@@ -59,3 +99,7 @@ git push -u origin main
 3. リポジトリの **Settings > Pages** で、Source を `Deploy from a branch`、Branch を `main` / `/(root)` に設定して保存
 
 4. 数十秒後、`https://<ユーザー名>.github.io/jns-tennis/` で公開されます
+
+## デザインを変えたい場合
+
+レイアウトや CSS クラスを変えるときは `index.html.template` と `css/style.css` を編集し、再度 `python3 build.py` を実行してください。
