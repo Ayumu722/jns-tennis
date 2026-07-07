@@ -9,6 +9,7 @@ site:
   copyright: 神経科学テニス交流会 有志
 
 hero:
+  background: "images/Gemini_neuro2026_tennis.png"  # 例: images/hero-bg.jpg（空ならグラデーションのみ）
   kicker: Neuro2026【非公式】 懇親イベント
   title: 硬式テニス交流会
   subtitle: 学会の合間にコートで一汗。研究者どうし、ラケットを通じてつながろう。

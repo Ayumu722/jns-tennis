@@ -33,8 +33,11 @@
   </header>
 
   <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
+  <section class="hero{% if hero.background %} hero--image{% endif %}">
+    {%- if hero.background %}
+    <img class="hero-bg" src="{{ hero.background }}" alt="" aria-hidden="true" />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    {%- endif %}
     <div class="container hero-content">
       <p class="hero-kicker">{{ hero.kicker }}</p>
       <h1 class="hero-title">{{ hero.title }}</h1>
