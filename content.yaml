@@ -125,7 +125,11 @@ register:
   note: 上記4点を記載の上、メールまたはXのDMでお送りください。参加人数が想定より多くなりそうな場合は定員を締め切らせていただく可能性があります。
 
 gallery:
-  description: 昨年度（Neuro2025）の硬式テニス交流会の様子です。掲載写真はプライバシー保護のため顔にモザイクを入れています。
+  description: Neuro2026 宣伝ポスターと、昨年度（Neuro2025）の硬式テニス交流会の様子です。集合写真はプライバシー保護のため顔にモザイクを入れています。
   images:
+    - src: images/IMG_6191.jpg
+      alt: Neuro2026 硬式テニス交流会 宣伝ポスター（1）
+    - src: images/IMG_6192.jpg
+      alt: Neuro2026 硬式テニス交流会 宣伝ポスター（2）
     - src: images/gallery-neuro2025.jpg
       alt: Neuro2025 硬式テニス交流会（集合写真）
