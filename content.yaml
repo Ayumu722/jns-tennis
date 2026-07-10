@@ -14,8 +14,8 @@ hero:
   title: 硬式テニス交流会
   subtitle: 学会の合間にコートで一汗。研究者どうし、ラケットを通じてつながろう。
   chips:
-    - 📅 2026/07/31 xx:xx-xx:xx
-    - 📍 【会場未定】
+    - 📅 2026/07/30 (木) 19:00-22:00
+    - 📍 会場は参加者にのみ連絡
     - 👥 初心者歓迎
 
 about:
@@ -25,9 +25,12 @@ about:
       ニューロサイエンスの第一線で活躍する研究者・学生が、学会の枠を越えて
       スポーツを通じて親睦を深めることを目的としています。
     - >-
+      オムニコートでの開催を予定していますので、なるべくオムニコート用のテニスシューズをお持ちください。
+      ボールはこちらで用意しますが、ラケットはなるべくご自身のものをお持ちください。
+      複数本持ってきているメンバーから借りることが出来る可能性はあります。
+    - >-
       競技志向の方からブランクのある方、初心者まで、どなたでも楽しめる
-      レクリエーション形式を予定しています。ラケットレンタルの可否などは
-      追って本ページでご案内します。
+      レクリエーション形式を予定しています。
   points:
     - icon: 🤝
       title: 研究者ネットワーキング
@@ -43,63 +46,53 @@ about:
 
 access:
   date:
-    headline: 2026/07/31 xx:xx-xx:xx
-    detail: 大会会期中の予定です。確定次第こちらに掲載します。
+    headline: 2026/07/30 (木) 19:00-22:00
+    detail: 学会後、公共交通機関で15分程度のコートで開催予定です。
   venue:
-    headline: 【テニスコート名・未定】
-    detail: 【住所・未定】
+    headline: 会場は参加者にのみお伝えします
+    detail: 参加が確定した方へ、個別に会場名・アクセス方法をご連絡します。
   transport:
-    headline: 【最寄駅・未定】
-    detail: 学会会場からの移動手段は追ってご案内します。
+    headline: アクセス
+    detail: 会場の詳細と合わせて、参加者にのみご案内します。
   map:
-    message: 🗺️ 地図はこちらに掲載予定
-    url: "#"
-    label: Google マップで開く（リンク未設定）
-    placeholder: true  # false にして url を実URLにするとリンクが有効になります
+    message: 会場情報は公開しておりません（参加者に個別連絡）
+    hidden: true
 
 schedule:
   timeline:
-    - time: 【時刻未定】
+    - time: 【19:00】
       title: 集合・受付
       description: コートに集合。参加費のお支払い
-    - time: 【時刻未定】
+    - time: 【19:10】
       title: ウォームアップ・乱打
       description: 準備運動と肩慣らし。
-    - time: 【時刻未定】
+    - time: 【22:00】
       title: 解散
   note: ※ 形式・時間は参加人数により変更する場合があります。
 
 fee:
-  amount: ¥【未定】
-  amount_note: コート使用料・ボール代等を含む予定。当日現金払いを想定。
+  amount: 約2000円程度になる予定です
+  amount_note: コート使用料・ボール代等を含む予定。当日現金またはpaypayで支払いを想定。
   bring_items:
-    - テニスラケット（レンタル可否は調整中）
+    - テニスラケット（複数本持ってきているメンバーから借りることが出来る可能性はあります）
     - 運動できる服装・テニスシューズ
     - 飲み物・タオル・着替え
 
 register:
-  lead: 下記フォームよりお申し込みください。定員に達し次第締め切ります。締切・定員は確定次第ご案内します。
-  form:
-    url: "#"
-    label: 申込フォームを開く（リンク未設定）
-    placeholder: true  # false にして url を Google フォーム等のURLに
-  contact:
-    email: example@example.com
-    label: 【連絡先メール・未定】
-    placeholder: true  # false にして email を実アドレスに
+  lead: 参加希望者は豊泉英智まで、以下のいずれかでご連絡ください。
+  contact_name: 豊泉英智
+  email: eichi.toyoizumi@riken.jp
+  x_url: https://x.com/eichi_toyoizumi
+  x_label: X（@eichi_toyoizumi）のDM
+  required_fields:
+    - フルネーム
+    - 所属先
+    - 職階
+    - テニスの経験
+  note: 上記4点を記載の上、メールまたはXのDMでお送りください。定員に達し次第締め切ります。
 
 gallery:
-  description: 過去大会の様子（写真は差し替え予定のプレースホルダーです）。
+  description: 昨年度（Neuro2025）の硬式テニス交流会の様子です。掲載写真はプライバシー保護のため顔にモザイクを入れています。
   images:
-    - src: images/gallery-1.svg
-      alt: 過去大会の様子1
-    - src: images/gallery-2.svg
-      alt: 過去大会の様子2
-    - src: images/gallery-3.svg
-      alt: 過去大会の様子3
-    - src: images/gallery-4.svg
-      alt: 過去大会の様子4
-    - src: images/gallery-5.svg
-      alt: 過去大会の様子5
-    - src: images/gallery-6.svg
-      alt: 過去大会の様子6
+    - src: images/gallery-neuro2025.jpg
+      alt: Neuro2025 硬式テニス交流会（集合写真）

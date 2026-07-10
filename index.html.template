@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
   <!-- ===== Header / Nav ===== -->
@@ -103,12 +103,16 @@
             <p>{{ access.transport.detail }}</p>
           </div>
         </div>
+        {%- if access.map is defined and not access.map.get('hidden') %}
         <div class="map-frame">
           <div class="map-placeholder">
             <span>{{ access.map.message }}</span>
             <a href="{{ access.map.url }}" class="btn btn-ghost btn-sm"{% if access.map.placeholder %} data-placeholder{% endif %}>{{ access.map.label }}</a>
           </div>
         </div>
+        {%- elif access.map is defined and access.map.get('hidden') %}
+        <p class="map-note">{{ access.map.message }}</p>
+        {%- endif %}
       </div>
     </section>
 
@@ -162,10 +166,20 @@
         <span class="section-label light">Registration</span>
         <h2 class="section-title light">参加申込</h2>
         <p class="register-lead">{{ register.lead }}</p>
-        <a href="{{ register.form.url }}" class="btn btn-primary btn-lg"{% if register.form.placeholder %} data-placeholder{% endif %}>{{ register.form.label }}</a>
-        <p class="contact">
-          お問い合わせ: <a href="mailto:{{ register.contact.email }}"{% if register.contact.placeholder %} data-placeholder{% endif %}>{{ register.contact.label }}</a>
-        </p>
+        <div class="register-box">
+          <p class="register-contact-name">連絡先: <strong>{{ register.contact_name }}</strong></p>
+          <ul class="register-methods">
+            <li><a href="mailto:{{ register.email }}">メール: {{ register.email }}</a></li>
+            <li><a href="{{ register.x_url }}" target="_blank" rel="noopener noreferrer">{{ register.x_label }}</a></li>
+          </ul>
+          <p class="register-required">記載事項:</p>
+          <ul class="register-fields">
+            {%- for field in register.required_fields %}
+            <li>{{ field }}</li>
+            {%- endfor %}
+          </ul>
+          <p class="register-note">{{ register.note }}</p>
+        </div>
       </div>
     </section>
 
