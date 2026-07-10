@@ -1,5 +1,38 @@
 # サイトの文章・リンクはこのファイルだけ編集してください。
 # 変更後: python3 build.py → git push
+# 英語版: content.en.yaml
+
+nav:
+  about: 概要
+  access: 日時・会場
+  schedule: スケジュール
+  fee: 参加費
+  gallery: ギャラリー
+  register: 参加申込
+
+ui:
+  lang_switch: EN
+  menu_open: メニューを開く
+  lightbox_close: 閉じる
+  lightbox_alt: 拡大表示
+  hero_register: 参加を申し込む
+  hero_learn: 詳しく見る
+  organizer_prefix: "主催:"
+  organizer_co_prefix: "共催・協力:"
+  access_date: 日時
+  access_venue: 会場
+  access_transport: アクセス
+  section_about: イベント概要
+  section_access: 日時・会場
+  section_schedule: 当日スケジュール・対戦形式
+  section_fee: 参加費・持ち物
+  fee_title: 参加費
+  bring_title: 持ち物
+  section_register: 参加申込
+  section_gallery: フォトギャラリー
+  register_contact: "連絡先:"
+  register_email_prefix: "メール:"
+  register_fields: 記載事項
 
 site:
   title: Neuro2026 硬式テニス交流会【非公式】
@@ -71,8 +104,8 @@ schedule:
   note: ※ 形式・時間は参加人数により変更する場合があります。
 
 fee:
-  amount: 約2000円程度になる予定です
-  amount_note: コート使用料・ボール代等を含む予定。当日現金またはpaypayで支払いを想定。
+  amount: 約2000円程度
+  amount_note: コート使用料・ボール代等を含む予定。参加人数によって上下します。当日現金またはpaypayで支払いを想定。
   bring_items:
     - テニスラケット（複数本持ってきているメンバーから借りることが出来る可能性はあります）
     - 運動できる服装・テニスシューズ
@@ -89,7 +122,7 @@ register:
     - 所属先
     - 職階
     - テニスの経験
-  note: 上記4点を記載の上、メールまたはXのDMでお送りください。定員に達し次第締め切ります。
+  note: 上記4点を記載の上、メールまたはXのDMでお送りください。参加人数が想定より多くなりそうな場合は定員を締め切らせていただく可能性があります。
 
 gallery:
   description: 昨年度（Neuro2025）の硬式テニス交流会の様子です。掲載写真はプライバシー保護のため顔にモザイクを入れています。

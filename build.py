@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""content.yaml から index.html を生成する。"""
+"""content.yaml / content.en.yaml から index.html を生成する。"""
 
 from __future__ import annotations
 
@@ -7,9 +7,26 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-CONTENT = ROOT / "content.yaml"
 TEMPLATE = ROOT / "index.html.template"
-OUTPUT = ROOT / "index.html"
+
+LOCALES = (
+    {
+        "lang": "ja",
+        "content": ROOT / "content.yaml",
+        "output": ROOT / "index.html",
+        "asset_prefix": "",
+        "lang_switch": {"href": "en/", "lang": "en"},
+        "hreflang": {"ja": "./", "en": "en/"},
+    },
+    {
+        "lang": "en",
+        "content": ROOT / "content.en.yaml",
+        "output": ROOT / "en" / "index.html",
+        "asset_prefix": "../",
+        "lang_switch": {"href": "../", "lang": "ja"},
+        "hreflang": {"ja": "../", "en": "./"},
+    },
+)
 
 
 def main() -> int:
@@ -21,24 +38,35 @@ def main() -> int:
         print("  pip install -r requirements.txt")
         return 1
 
-    for path in (CONTENT, TEMPLATE):
-        if not path.is_file():
-            print(f"エラー: {path.name} が見つかりません")
-            return 1
+    if not TEMPLATE.is_file():
+        print(f"エラー: {TEMPLATE.name} が見つかりません")
+        return 1
 
-    print(f"[1/3] 読込: {CONTENT.name}")
-    data = yaml.safe_load(CONTENT.read_text(encoding="utf-8"))
-
-    print(f"[2/3] テンプレート適用: {TEMPLATE.name}")
     env = Environment(
         loader=FileSystemLoader(ROOT),
         autoescape=select_autoescape(["html", "xml"]),
         keep_trailing_newline=True,
     )
-    html = env.get_template(TEMPLATE.name).render(**data)
+    template = env.get_template(TEMPLATE.name)
 
-    print(f"[3/3] 出力: {OUTPUT.name}")
-    OUTPUT.write_text(html, encoding="utf-8")
+    print(f"テンプレート: {TEMPLATE.name}")
+    for i, loc in enumerate(LOCALES, 1):
+        if not loc["content"].is_file():
+            print(f"エラー: {loc['content'].name} が見つかりません")
+            return 1
+        print(f"[{i}/{len(LOCALES)}] 読込: {loc['content'].name} ({loc['lang']})")
+        data = yaml.safe_load(loc["content"].read_text(encoding="utf-8"))
+        html = template.render(
+            lang=loc["lang"],
+            asset_prefix=loc["asset_prefix"],
+            lang_switch=loc["lang_switch"],
+            hreflang=loc["hreflang"],
+            **data,
+        )
+        loc["output"].parent.mkdir(parents=True, exist_ok=True)
+        loc["output"].write_text(html, encoding="utf-8")
+        print(f"      出力: {loc['output'].relative_to(ROOT)}")
+
     print("完了")
     return 0
 

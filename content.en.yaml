@@ -1,0 +1,129 @@
+# English content — edit alongside content.yaml, then: python3 build.py
+
+nav:
+  about: About
+  access: Date & Venue
+  schedule: Schedule
+  fee: Fee
+  gallery: Gallery
+  register: Register
+
+ui:
+  lang_switch: JA
+  menu_open: Open menu
+  lightbox_close: Close
+  lightbox_alt: Enlarged view
+  hero_register: Register
+  hero_learn: Learn more
+  organizer_prefix: "Organizer:"
+  organizer_co_prefix: "Co-organizers:"
+  access_date: Date & Time
+  access_venue: Venue
+  access_transport: Access
+  section_about: About the Event
+  section_access: Date & Venue
+  section_schedule: Schedule
+  section_fee: Fee & What to Bring
+  fee_title: Participation Fee
+  bring_title: What to Bring
+  section_register: Registration
+  section_gallery: Photo Gallery
+  register_contact: "Contact:"
+  register_email_prefix: "Email:"
+  register_fields: Please include
+
+site:
+  title: Neuro2026 Tennis Social [Unofficial]
+  description: Unofficial tennis social for Neuro2026 attendees. Date, venue, and registration info.
+  brand: Neuroscience Tennis Social [Unofficial]
+  footer_title: Neuro2026 Tennis Social [Unofficial]
+  copyright: Neuroscience Tennis Social (volunteer organizers)
+
+hero:
+  background: images/Gemini_neuro2026_tennis.png
+  kicker: Neuro2026 [Unofficial] Social Event
+  title: Tennis Social
+  subtitle: Take a break from the conference and connect with fellow researchers on the court.
+  chips:
+    - 📅 Thu, Jul 30, 2026 · 7:00 PM–10:00 PM
+    - 📍 Venue shared with registered participants only
+    - 👥 Beginners welcome
+
+about:
+  paragraphs:
+    - >-
+      A tennis social for Neuro2026 attendees. Researchers and students active in
+      neuroscience are invited to connect across labs and fields through sport.
+    - >-
+      We plan to play on omnibus courts, so please bring omnibus-compatible tennis shoes if possible.
+      We will provide balls; please bring your own racket if you can.
+      You may be able to borrow one from participants who bring extras.
+    - >-
+      From competitive players to beginners and those returning after a break—everyone is welcome
+      in a recreational format.
+  points:
+    - icon: 🤝
+      title: Researcher networking
+      text: Connect across fields and affiliations.
+    - icon: 🎾
+      title: All levels welcome
+      text: From beginners to experienced players.
+    - icon: ☀️
+      title: Easy to join
+      text: A refreshing break during the conference.
+  organizer_main: Neuroscience Tennis Social (volunteers)
+  organizer_co: Eichi Toyoizumi, Ayumu Yamashita
+
+access:
+  date:
+    headline: Thu, Jul 30, 2026 · 7:00 PM–10:00 PM
+    detail: After the conference, at a court about 15 minutes away by public transit.
+  venue:
+    headline: Venue details for registered participants only
+    detail: Confirmed participants will receive the court name and directions individually.
+  transport:
+    headline: Access
+    detail: Detailed directions will be shared with registered participants along with the venue.
+  map:
+    message: Venue is not published publicly (shared with participants individually)
+    hidden: true
+
+schedule:
+  timeline:
+    - time: 7:00 PM
+      title: Meet & check-in
+      description: Gather at the court. Pay the participation fee.
+    - time: 7:10 PM
+      title: Warm-up & rally
+      description: Stretch and loosen up.
+    - time: 10:00 PM
+      title: End
+      description: ""
+  note: ※ Schedule and format may change depending on the number of participants.
+
+fee:
+  amount: Approx. ¥2,000
+  amount_note: Includes court rental and balls; the exact amount may vary with headcount. Cash or PayPay on the day.
+  bring_items:
+    - Tennis racket (you may be able to borrow from someone with extras)
+    - Athletic wear and tennis shoes
+    - Drinks, towel, and a change of clothes
+
+register:
+  lead: To register, please contact Eichi Toyoizumi by email or X DM.
+  contact_name: Eichi Toyoizumi
+  email: eichi.toyoizumi@riken.jp
+  x_url: https://x.com/eichi_toyoizumi
+  x_label: X (@eichi_toyoizumi) DM
+  required_fields:
+    - Full name
+    - Affiliation
+    - Career stage
+    - Tennis experience
+  note: Please include all four items above. We may close registration early if participation exceeds our expected capacity.
+
+gallery:
+  description: Photos from last year's tennis social (Neuro2025). Faces are mosaic-processed for privacy.
+  images:
+    - src: images/gallery-neuro2025.jpg
+      alt: Neuro2025 tennis social group photo

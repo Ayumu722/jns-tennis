@@ -6,10 +6,12 @@
 
 ```
 jns-tennis/
-├── content.yaml          # ★ 編集するのは基本このファイルだけ
-├── build.py              # content.yaml → index.html を生成
+├── content.yaml          # ★ 日本語（編集用）
+├── content.en.yaml       # ★ 英語（編集用）
+├── build.py              # 両言語の index.html を生成
 ├── index.html.template   # HTML の骨組み（通常は触らない）
-├── index.html            # 生成物（build.py の出力）
+├── index.html            # 日本語（生成物）
+├── en/index.html         # 英語（生成物）
 ├── requirements.txt      # ビルド用（初回のみ pip install）
 ├── css/style.css         # デザイン
 ├── js/main.js            # ナビ開閉・ギャラリーのライトボックス
@@ -17,9 +19,17 @@ jns-tennis/
 └── README.md
 ```
 
+## 言語切り替え
+
+- 日本語: `/`（`index.html`）
+- 英語: `/en/`（`en/index.html`）
+- ヘッダーの **EN / JA** ボタンで切り替え
+
+内容を変えるときは **`content.yaml`（日本語）と `content.en.yaml`（英語）の両方** を更新してください。
+
 ## 内容の更新手順
 
-1. **`content.yaml` を編集**（日程・会場・参加費・リンクなど）
+1. **`content.yaml`（日本語）と `content.en.yaml`（英語）を編集**
 2. **ビルドを実行**
 
 ```bash
@@ -31,9 +41,9 @@ python3 -m venv .venv          # 初回のみ
 
 （venv 作成済みなら `.venv/bin/python build.py` だけで OK）
 
-3. **`index.html` も一緒に commit & push**（GitHub Pages は静的ファイルをそのまま配信するため）
+3. **`index.html` と `en/index.html` も一緒に commit & push**（GitHub Pages は静的ファイルをそのまま配信するため）
 
-> `index.html` は直接編集しないでください。変更は `content.yaml` に書いてから `build.py` を実行します。
+> HTML は直接編集しないでください。変更は YAML に書いてから `build.py` を実行します。
 
 ## content.yaml の主な項目
 
